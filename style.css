@@ -1,0 +1,286 @@
+/* --- Global Styles --- */
+:root {
+    --primary-color: #f5dcdb; /* Soft Pink */
+    --secondary-color: #fcf8e3; /* Cream */
+    --text-color: #4a4a4a;
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Quicksand', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e0a9a2; /* Slightly darker pink */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin-bottom: 0;
+    font-size: 2em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+/* --- Hero Section --- */
+#hero {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 80px 0;
+    margin-bottom: 40px;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* --- Gallery Section --- */
+#gallery {
+    padding: 60px 0;
+    background-color: var(--secondary-color);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px; /* Fixed height for consistent look */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+/* --- How to Order Section --- */
+#how-to-order {
+    padding: 60px 0;
+    background-color: var(--primary-color);
+}
+
+.order-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.order-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.order-info ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.order-info li {
+    margin-bottom: 15px;
+}
+
+.order-info strong {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.order-cta {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.btn-instagram {
+    display: inline-block;
+    background-color: #e1306c; /* Instagram red */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+}
+
+.btn-instagram i {
+    margin-right: 10px;
+}
+
+.btn-instagram:hover {
+    background-color: #c32aa3; /* Darker Instagram red */
+    transform: translateY(-2px);
+}
+
+.order-cta p {
+    font-style: italic;
+    color: #666;
+}
+
+/* --- About Section --- */
+#about {
+    padding: 60px 0;
+    background-color: var(--secondary-color);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        margin: 5px 10px;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    #hero h2 {
+        font-size: 2.5em;
+    }
+
+    .order-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .order-info, .order-cta {
+        width: 100%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header nav ul li {
+        margin: 5px 5px;
+    }
+
+    .btn-instagram {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+
+    .gallery-item img {
+        height: 200px;
+    }
+}
